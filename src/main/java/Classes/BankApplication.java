@@ -63,12 +63,21 @@ public class BankApplication {
                                     = UserDatabase.get(tmp);
 
                             user = new CreateAccountClass(RetrivingOldData.get("Depositor Name :"), tmp, Integer.parseInt(RetrivingOldData.get("Account Balance : ")), "Account Type :"); // initilaize -- name,acc_number,Balance,Type
+                            CardClass cardobj = new CardClass(String.valueOf(GenerateRandomNumber())+
+                                    String.valueOf(GenerateRandomNumber())+
+                                    String.valueOf(GenerateRandomNumber())+String.valueOf(GenerateRandomNumber()),String.valueOf(GenerateRandomNumber()),
+                                    tmp);
+
                             do {
 
                                 System.out.println("1. Deposit money");
                                 System.out.println("2. Withdraw money");
                                 System.out.println("3. Check balance");
                                 System.out.println("4. Display Account Details");
+                                System.out.println("5. Display Card Details");
+                                System.out.println("6. Create Card");
+                                System.out.println("7. View My Profile");
+                                System.out.println("8. Edit Profile");
                                 System.out.println("0. to quit: \n");
                                 System.out.print("Enter Your Choice : ");
                                 UserChoiceMainMenu = in.nextInt();
@@ -98,19 +107,22 @@ public class BankApplication {
                                         } catch (Exception e) {
                                             System.out.println(e.getMessage());
                                         }
-
-
                                         break;
 
                                     case 3: // check balance
-
                                         user.display_balance();
                                         break;
 
                                     case 4:
                                             user.display_details();
-
                                         break;
+
+                                    case 5: //check the card details
+
+                                        System.out.println(cardobj.getCard_Number());
+                                        System.out.println(cardobj.getCard_Pin());
+                                        break;
+
                                     case 0:
                                         mainmenuquit = true;
                                         break;
@@ -133,11 +145,16 @@ public class BankApplication {
                     break;
 
                 case 2: // Todo: Make new Account
+
                     System.out.print("Enter your Name : ");
                     user_name = strng.nextLine();
                     System.out.print("Enter Accout Type : ");
                     type = in.next();
                     user.insert(user_name, AccountNumber, type);  // inserted
+                    CardClass cardobj = new CardClass(String.valueOf(GenerateRandomNumber())+
+                            String.valueOf(GenerateRandomNumber())+
+                            String.valueOf(GenerateRandomNumber())+String.valueOf(GenerateRandomNumber()),String.valueOf(GenerateRandomNumber())
+                            , AccountNumber);
                     System.out.println("\n\tYour Account Details\n\tDont Forget Account Number\n");
                     System.out.println("**************************");
                     user.display_details();
