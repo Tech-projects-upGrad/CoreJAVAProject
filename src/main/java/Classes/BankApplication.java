@@ -63,10 +63,7 @@ public class BankApplication {
                                     = UserDatabase.get(tmp);
 
                             user = new CreateAccountClass(RetrivingOldData.get("Depositor Name :"), tmp, Integer.parseInt(RetrivingOldData.get("Account Balance : ")), "Account Type :"); // initilaize -- name,acc_number,Balance,Type
-                            CardClass cardobj = new CardClass(String.valueOf(GenerateRandomNumber())+
-                                    String.valueOf(GenerateRandomNumber())+
-                                    String.valueOf(GenerateRandomNumber())+String.valueOf(GenerateRandomNumber()),String.valueOf(GenerateRandomNumber()),
-                                    tmp);
+                            CardClass cardobj = new CardClass(tmp);
 
                             do {
 
@@ -118,9 +115,8 @@ public class BankApplication {
                                         break;
 
                                     case 5: //check the card details
-
-                                        System.out.println(cardobj.getCard_Number());
-                                        System.out.println(cardobj.getCard_Pin());
+                                        System.out.println("Card Number : "+cardobj.getCard_Number());
+                                        System.out.println("Card Pin : "+cardobj.getCard_Pin());
                                         break;
 
                                     case 0:
@@ -151,10 +147,12 @@ public class BankApplication {
                     System.out.print("Enter Accout Type : ");
                     type = in.next();
                     user.insert(user_name, AccountNumber, type);  // inserted
-                    CardClass cardobj = new CardClass(String.valueOf(GenerateRandomNumber())+
-                            String.valueOf(GenerateRandomNumber())+
-                            String.valueOf(GenerateRandomNumber())+String.valueOf(GenerateRandomNumber()),String.valueOf(GenerateRandomNumber())
-                            , AccountNumber);
+                    String cardnumber = String.valueOf(GenerateRandomNumber())+
+                            GenerateRandomNumber() +
+                    GenerateRandomNumber() + GenerateRandomNumber();
+                    String cardpin = String.valueOf(GenerateRandomNumber());
+                    CardClass cardobj = new CardClass(cardnumber,cardpin, AccountNumber);
+                    cardobj.insertCard();
                     System.out.println("\n\tYour Account Details\n\tDont Forget Account Number\n");
                     System.out.println("**************************");
                     user.display_details();

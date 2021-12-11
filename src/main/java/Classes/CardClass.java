@@ -16,20 +16,24 @@ public class CardClass {
         Card_Number = card_Number;
         Card_Pin = card_Pin;
         Acc_num =acc_num;
+    }
 
-        //todo: Check if the user is present:
-        //todo : apply the try catch statement to check server availability
+    public CardClass ( int acc_num) {
+        Acc_num =acc_num;
+    }
 
-        if (UserDatabase.containsKey(acc_num)) {
+    public void insertCard(){
+        if (UserDatabase.containsKey(Acc_num)) {
             //Todo: get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData
-                    = UserDatabase.get(acc_num);
+                    = UserDatabase.get(Acc_num);
 
-            RetrivingOldData.put("Account Card :", card_Number);
-            RetrivingOldData.put("Account Pin :", card_Pin);
+            RetrivingOldData.put("Account Card :", Card_Number);
+            RetrivingOldData.put("Account Pin :", Card_Pin);
 
-            UserDatabase.put(acc_num, RetrivingOldData);
-        } else {
+            UserDatabase.put(Acc_num, RetrivingOldData);
+            System.out.println(UserDatabase.get(Acc_num));        }
+        else {
             System.out.println("Error inserting data.");
         }
     }
