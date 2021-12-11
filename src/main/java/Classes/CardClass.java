@@ -1,6 +1,5 @@
 package Classes;
 
-import java.util.Date;
 import java.util.HashMap;
 
 import static Classes.FunctionalityGenerator.DemoDataBaseClass.UserDatabase;

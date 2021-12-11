@@ -1,5 +1,5 @@
 package Classes;
-public class AccountClass {
+abstract class AccountClass {
 
     String name,acc_type;
     int Acc_num,Acc_Balance;
