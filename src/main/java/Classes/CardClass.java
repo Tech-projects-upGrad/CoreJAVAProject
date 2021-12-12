@@ -76,5 +76,4 @@ public class CardClass {
             System.out.println("Error inserting data.");
         }
     }
-
 }

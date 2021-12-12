@@ -6,10 +6,14 @@ import static Classes.FunctionalityGenerator.CompanyLogoPrinterJava.LogoPrinter;
 
 public class TimeOutPage extends Thread {
     //Todo: This class counts down the time to allow the user on a page for 60 seconds
+    // Todo: Multi-threading is yet to be implemented
+    Boolean execute = true;
 
     @Override
     public void run() {
+
         final int[] runnumber = {0};
+
         TimerTask increaseTemperature = new TimerTask() {
 
 
@@ -32,11 +36,16 @@ public class TimeOutPage extends Thread {
         //start a 3 seconds timer 10ms later
         increaserTimer.scheduleAtFixedRate(increaseTemperature, 1000, 1000);
 
-        while (runnumber[0]<=60) {
+        while (execute && runnumber[0]<=60) {
             //give it some time to see timer triggering
 
 
         }
+
+    }
+
+    public void stopExecuting() {
+        execute = false;
     }
 }
 

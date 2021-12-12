@@ -21,8 +21,8 @@ public class BankApplication {
         //Todo: destroy the object.
 
         TimeOutPage timeoutobject = new TimeOutPage();
-        timeoutobject.start();
-        timeoutobject.stop();
+        //timeoutobject.start();
+        //Todo: To manage the timeout object efficiently
 
         String user_name = null, type;
         type = null;
@@ -48,6 +48,7 @@ public class BankApplication {
             System.out.println("2. Open a new Account");
             System.out.println("0. to quit: \n");
 
+
             UserChoiceLoginMenu = in.nextInt();
             switch (UserChoiceLoginMenu) {
 
@@ -57,6 +58,8 @@ public class BankApplication {
 
                         System.out.print("Enter your account Number : ");
                         tmp = in.nextInt();
+
+
                         if (DemoDataBaseClass.UserDatabase.containsKey(tmp)) {
                             //Todo: Initializing the user object from database:
                             HashMap<String, String> RetrivingOldData

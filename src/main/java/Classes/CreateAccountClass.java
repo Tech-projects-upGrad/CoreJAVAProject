@@ -1,5 +1,7 @@
 package Classes;
 
+import Classes.FunctionalityGenerator.DataValidator;
+
 import java.util.HashMap;
 
 import static Classes.FunctionalityGenerator.DemoDataBaseClass.AddUserRecord;
@@ -30,7 +32,9 @@ public class CreateAccountClass extends AccountClass {
         NewUserRecord.put("Account Balance : ", String.valueOf(Acc_Balance));
         NewUserRecord.put("Account Type :", acc_type);
 
+        if(DataValidator.DataValidationDuplicate(Acc_num)==true)
         AddUserRecord(Acc_num, NewUserRecord);
+        else System.out.println("Error generating new Account. Please retry");
     }
 
     void display_details() {
