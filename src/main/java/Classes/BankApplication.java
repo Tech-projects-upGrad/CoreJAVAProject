@@ -39,9 +39,11 @@ public class BankApplication {
         Scanner strng = new Scanner(System.in);
         int UserChoiceMainMenu;
         int UserChoiceLoginMenu;
+        int UserEditMenu;
         boolean mainmenuquit = false;
         boolean loginmenuquit = false;
         boolean userpresentquit = false;
+        boolean editmenuquit = false;
 
         do {
             System.out.println("1. Already Have an Account");
@@ -75,9 +77,9 @@ public class BankApplication {
                                 System.out.println("3. Check balance");
                                 System.out.println("4. Display Account Details");
                                 System.out.println("5. Display Card Details");
-                                System.out.println("6. Create Card");
-                                System.out.println("7. View My Profile");
-                                System.out.println("8. Edit Profile");
+                                System.out.println("6. Create New Card");
+                                System.out.println("7. Edit Profile");
+                                System.out.println("8. View Transaction History");
                                 System.out.println("0. to quit: \n");
                                 System.out.print("Enter Your Choice : ");
                                 UserChoiceMainMenu = in.nextInt();
@@ -122,6 +124,50 @@ public class BankApplication {
                                         System.out.println("Card Pin : "+cardobj.getCard_Pin());
                                         break;
 
+                                    case 6: //create new Card and remove the previous card
+                                        cardobj.CreateNewCard();
+                                        System.out.println("New Card Number "+cardobj.getCard_Number());
+                                        System.out.println("New Card Pin "+cardobj.getCard_Pin());
+                                        break;
+                                    case 7:
+                                        do {
+                                            System.out.println("1. Change User Name");
+                                            System.out.println("2. Change Account type");
+                                            System.out.println("3. Change Card Pin");
+                                            System.out.println("0. to quit: \n");
+
+                                            UserEditMenu = in.nextInt();
+                                            EditProfileClass editProfileObj = new EditProfileClass(AccountNumber);
+                                            switch (UserEditMenu) {
+
+                                                case 1:
+                                                    System.out.println("Enter new Name");
+                                                    String new_name = in.next();
+                                                    editProfileObj.setDepositer_Name(new_name);
+                                                    System.out.println("Name Changed to " + editProfileObj.getDepositer_Name());
+                                                    break;
+                                                case 2:
+                                                    System.out.println("Enter new Account_type");
+                                                    String new_acc_type = in.next();
+                                                    editProfileObj.setAcc_Type(new_acc_type);
+                                                    System.out.println("Account type Changed to " +(editProfileObj.getAcc_Type()));
+                                                    break;
+                                                case 3:
+                                                    System.out.println("Enter new 4 digit Pin");
+                                                    String new_pin = in.next();
+                                                    editProfileObj.setCard_Pin(new_pin);
+                                                    System.out.println("Pin changed to " +editProfileObj.getCard_Pin());
+                                                    break;
+                                                case 0:
+                                                    editmenuquit=true;
+                                                    break;
+                                                default:
+                                                    System.out.println("Wrong Choice.");
+                                                    break;
+
+                                            }
+                                        }while (!editmenuquit);
+                                        break;
                                     case 0:
                                         mainmenuquit = true;
                                         break;

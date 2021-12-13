@@ -1,8 +1,11 @@
 package Classes;
 
+import Classes.FunctionalityGenerator.RandomNumberGenerator;
+
 import java.util.HashMap;
 
 import static Classes.FunctionalityGenerator.DemoDataBaseClass.UserDatabase;
+import static Classes.FunctionalityGenerator.RandomNumberGenerator.GenerateRandomNumber;
 
 public class CardClass {
     //Todo: DB is not public in real case.
@@ -21,6 +24,29 @@ public class CardClass {
         Acc_num =acc_num;
     }
 
+    public void CreateNewCard(){
+        if (UserDatabase.containsKey(Acc_num)) {
+            //Todo: get the userdata from the userdatabase
+            HashMap<String, String> RetrivingOldData;
+            RetrivingOldData=UserDatabase.get(Acc_num);
+            String NewCard = String.valueOf(GenerateRandomNumber())+
+                    GenerateRandomNumber() +
+                    GenerateRandomNumber() + GenerateRandomNumber();
+
+
+            String NewPin = RandomNumberGenerator.GenerateRandomNumber()+"";
+            //putting new data
+            RetrivingOldData.put("Account Card :", NewCard);
+            RetrivingOldData.put("Account Pin :", NewPin);
+            UserDatabase.put(Acc_num, RetrivingOldData);
+            System.out.println("************");
+
+        }
+        else {
+            System.out.println("Error creating new Card. Please try again.");
+        }
+    }
+
     public void insertCard(){
         if (UserDatabase.containsKey(Acc_num)) {
             //Todo: get the userdata from the userdatabase
@@ -31,7 +57,8 @@ public class CardClass {
             RetrivingOldData.put("Account Pin :", Card_Pin);
 
             UserDatabase.put(Acc_num, RetrivingOldData);
-            System.out.println(UserDatabase.get(Acc_num));        }
+            System.out.println(UserDatabase.get(Acc_num));
+        }
         else {
             System.out.println("Error inserting data.");
         }
@@ -75,5 +102,7 @@ public class CardClass {
         else {
             System.out.println("Error inserting data.");
         }
+
+
     }
 }
