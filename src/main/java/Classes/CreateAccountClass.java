@@ -9,11 +9,12 @@ import static Classes.FunctionalityGenerator.DemoDataBaseClass.UserDatabase;
 
 public class CreateAccountClass extends AccountClass {
 
-    CreateAccountClass(String n, int acc_num, int b, String a_t) { // pass name and account type
+    CreateAccountClass(String n, int acc_num, int b, String a_t, String pass) { // pass name and account type
         name = n;
         Acc_num = acc_num;
         Acc_Balance = b;
         acc_type = a_t;
+        password=pass;
     }
 
     CreateAccountClass() {
@@ -29,6 +30,7 @@ public class CreateAccountClass extends AccountClass {
         HashMap<String, String> NewUserRecord = new HashMap<>();
         NewUserRecord.put("Depositor Name :", name);
         NewUserRecord.put("Account Number : ", String.valueOf(Acc_num));
+        NewUserRecord.put("Password :", password);
         NewUserRecord.put("Account Balance : ", String.valueOf(Acc_Balance));
         NewUserRecord.put("Account Type :", acc_type);
 
@@ -45,7 +47,9 @@ public class CreateAccountClass extends AccountClass {
         System.out.println("Account Balance : " + RetrivingOldData.get("Account Balance : "));
         System.out.println("Account Type :" + RetrivingOldData.get("Account Type :"));
         System.out.println("Account Card :" + RetrivingOldData.get("Account Card :"));
+        System.out.println("Password : " + RetrivingOldData.get("Password :"));
         System.out.println("Card Pin :" + RetrivingOldData.get("Account Pin :"));
+        System.out.println("");
 
 
     }

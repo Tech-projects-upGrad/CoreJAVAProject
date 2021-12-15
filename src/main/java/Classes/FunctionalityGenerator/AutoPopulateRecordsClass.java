@@ -11,6 +11,7 @@ public class AutoPopulateRecordsClass {
     public static void DataEntry(){
         HashMap<String ,String > OldUserRecord = new HashMap<>();
         OldUserRecord.put("Depositor Name :", "mike");
+        OldUserRecord.put("Password :", "1233");
         OldUserRecord.put("Account Number : " , String.valueOf("1463"));
         OldUserRecord.put("Account Balance : " , String.valueOf("675"));
         OldUserRecord.put("Account Type :", "Savings");
@@ -22,6 +23,7 @@ public class AutoPopulateRecordsClass {
 
         OldUserRecord = new HashMap<>();
         OldUserRecord.put("Depositor Name :", "john");
+        OldUserRecord.put("Password :", "1533");
         OldUserRecord.put("Account Number : " , String.valueOf("8587"));
         OldUserRecord.put("Account Balance : " , String.valueOf("757868"));
         OldUserRecord.put("Account Type :", "Current");
@@ -33,6 +35,7 @@ public class AutoPopulateRecordsClass {
 
         OldUserRecord = new HashMap<>();
         OldUserRecord.put("Depositor Name :", "sam");
+        OldUserRecord.put("Password :", "1833");
         OldUserRecord.put("Account Number : " , String.valueOf("7868"));
         OldUserRecord.put("Account Balance : " , String.valueOf("876757"));
         OldUserRecord.put("Account Type :", "OverDraft");
@@ -45,6 +48,7 @@ public class AutoPopulateRecordsClass {
 
         OldUserRecord = new HashMap<>();
         OldUserRecord.put("Depositor Name :", "siugm");
+        OldUserRecord.put("Password :", "1033");
         OldUserRecord.put("Account Number : " , String.valueOf("2334"));
         OldUserRecord.put("Account Balance : " , String.valueOf("234234"));
         OldUserRecord.put("Account Type :", "OverDraft");
@@ -56,6 +60,7 @@ public class AutoPopulateRecordsClass {
 
         OldUserRecord = new HashMap<>();
         OldUserRecord.put("Depositor Name :", "ram");
+        OldUserRecord.put("Password :", "1230");
         OldUserRecord.put("Account Number : " , String.valueOf("9783"));
         OldUserRecord.put("Account Balance : " , String.valueOf("33322"));
         OldUserRecord.put("Account Type :", "Savings");
