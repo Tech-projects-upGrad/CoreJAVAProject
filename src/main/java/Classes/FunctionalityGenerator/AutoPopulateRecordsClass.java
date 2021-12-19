@@ -1,7 +1,5 @@
 package Classes.FunctionalityGenerator;
-
 import java.util.HashMap;
-
 import static Classes.FunctionalityGenerator.DemoDataBaseClass.UserDatabase;
 
 public class AutoPopulateRecordsClass {

@@ -1,10 +1,9 @@
 package Classes;
-
 import Classes.FunctionalityGenerator.DemoDataBaseClass;
 import Classes.FunctionalityGenerator.TimeOutPage;
-import org.w3c.dom.UserDataHandler;
 
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static Classes.FunctionalityGenerator.CompanyLogoPrinterJava.LogoPrinter;
@@ -14,9 +13,7 @@ import static Classes.FunctionalityGenerator.RandomNumberGenerator.GenerateRando
 public class BankApplication {
 
     //Todo: Handle the Input-mismatch excpetion.
-
     public static void main(String[] args) {
-
         LogoPrinter(4, true);
         //Todo: creating database object
         DemoDataBaseClass dataobjct = new DemoDataBaseClass();
@@ -42,9 +39,9 @@ public class BankApplication {
 
         Scanner in = new Scanner(System.in);
         Scanner strng = new Scanner(System.in);
-        int UserChoiceMainMenu;
-        int UserChoiceLoginMenu;
-        int UserEditMenu;
+        int UserChoiceMainMenu=0;
+        int UserChoiceLoginMenu=0;
+        int UserEditMenu=0;
         boolean mainmenuquit = false;
         boolean loginmenuquit = false;
         boolean userpresentquit = false;
@@ -57,8 +54,12 @@ public class BankApplication {
             System.out.println("2. Open a new Account");
             System.out.println("0. to quit: \n");
 
+            try{
+                UserChoiceLoginMenu = in.nextInt();
+            }catch (InputMismatchException e){
+                System.out.println();
+            }
 
-            UserChoiceLoginMenu = in.nextInt();
             switch (UserChoiceLoginMenu) {
 
                 case 1:
@@ -66,7 +67,8 @@ public class BankApplication {
                     do {
 
                         System.out.print("Enter your account Number : ");
-                        tmp = in.nextInt();
+
+                            tmp = in.nextInt();
 
                         if(wrong_entry_acc_num_cnt>5)
                         {
@@ -250,7 +252,7 @@ public class BankApplication {
                     break;
             }
         } while (!loginmenuquit);
-        System.out.println("Thank you for using MBankApp!");
+        LogoPrinter(5,false);
 
     }
 }
