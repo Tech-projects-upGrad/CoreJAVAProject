@@ -1,5 +1,5 @@
 # M-Bank App [![Logo](https://i.ibb.co/89FrYmC/resize-1639398808159694499-Screenshotfrom20211213175026.png "Logo")](https://ibb.co/L14xN0F "Logo")
-Banking Management Application is a project application coded in Java programming language built using the basics of core java programming concepts. The application does not use any database and server. This application mocks the flow of a banking application from users perspective where the user accesses the information using the web application interface.
+Banking Management Application is a project application coded in Java programming language built using the basics of core java programming concepts. The application does not use any database and server. This application mocks the flow of a banking application from users perspective where the user accesses the information using the web application interface. This is a solution template and not the final (or the only solution). Learners should refer to this in case they are not able to figure out how to proceed with the solution. 
  
 #### Following functionalities will be supported in the application:
 - Login 
