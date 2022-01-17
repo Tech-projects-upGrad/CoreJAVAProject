@@ -1,8 +1,4 @@
-package Classes.FunctionalityGenerator;
-
-import org.w3c.dom.UserDataHandler;
-
-import java.util.HashMap;
+package Classes.Entities;
 
 public class DataValidator {
 

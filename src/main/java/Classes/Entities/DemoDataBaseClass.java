@@ -1,8 +1,8 @@
-package Classes.FunctionalityGenerator;
+package Classes.Entities;
 
 import java.util.HashMap;
 
-import static Classes.FunctionalityGenerator.AutoPopulateRecordsClass.DataEntry;
+import static Classes.Entities.AutoPopulateRecordsClass.DataEntry;
 
 public class DemoDataBaseClass {
 

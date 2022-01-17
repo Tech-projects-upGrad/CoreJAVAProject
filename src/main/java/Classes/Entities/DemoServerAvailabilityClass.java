@@ -1,4 +1,4 @@
-package Classes.FunctionalityGenerator;
+package Classes.Entities;
 
 //mocking a demo server.
 

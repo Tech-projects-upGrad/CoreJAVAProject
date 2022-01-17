@@ -1,11 +1,11 @@
 package Classes;
 
-import Classes.FunctionalityGenerator.DataValidator;
+import Classes.Entities.DataValidator;
 
 import java.util.HashMap;
 
-import static Classes.FunctionalityGenerator.DemoDataBaseClass.AddUserRecord;
-import static Classes.FunctionalityGenerator.DemoDataBaseClass.UserDatabase;
+import static Classes.Entities.DemoDataBaseClass.AddUserRecord;
+import static Classes.Entities.DemoDataBaseClass.UserDatabase;
 
 public class CreateAccountClass extends AccountClass {
 

@@ -1,4 +1,4 @@
-package Classes.FunctionalityGenerator;
+package Classes.Entities;
 
 public class RandomNumberGenerator {
 

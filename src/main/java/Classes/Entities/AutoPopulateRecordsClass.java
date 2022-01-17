@@ -1,6 +1,6 @@
-package Classes.FunctionalityGenerator;
+package Classes.Entities;
 import java.util.HashMap;
-import static Classes.FunctionalityGenerator.DemoDataBaseClass.UserDatabase;
+import static Classes.Entities.DemoDataBaseClass.UserDatabase;
 
 public class AutoPopulateRecordsClass {
 

@@ -1,11 +1,11 @@
 package Classes;
 
-import Classes.FunctionalityGenerator.RandomNumberGenerator;
+import Classes.Entities.RandomNumberGenerator;
 
 import java.util.HashMap;
 
-import static Classes.FunctionalityGenerator.DemoDataBaseClass.UserDatabase;
-import static Classes.FunctionalityGenerator.RandomNumberGenerator.GenerateRandomNumber;
+import static Classes.Entities.DemoDataBaseClass.UserDatabase;
+import static Classes.Entities.RandomNumberGenerator.GenerateRandomNumber;
 
 /*
 Account Number setter is not generated as it is constant field.
