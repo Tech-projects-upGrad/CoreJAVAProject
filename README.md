@@ -25,19 +25,16 @@ Banking Management Application is a project application coded in Java programmin
 ###### Some user records will be auto-populated in the internal memory of the application to perform the tasks. Please make sure that the application should be kept running in case a concurrent user is doing the transactions, otherwise the transaction record will be deleted.
 
 #####  NOTE: This repository is still under development and new changes are being pushed frequently with added functionality. Make sure you clone the lastest version of the project.
- 
-[========]
 
 ## APPLICATION FLOW:
 
-
-[========]
+[![Flow Application](https://i.ibb.co/SPXs8dQ/Application-flow.png "Into Page")](https://ibb.co/fHwG62x "FLow Application")
 
 ### Screenshots
 
 ###### Below are some attached image of how the console application will look on running the project.
 
-[![Into Page](https://i.ibb.co/JHJF6Ks/Screenshot-from-2021-12-13-17-50-17.png "Into Page")](https://ibb.co/fHwG62x "Into Page")
+[![Into Page](https://i.ibb.co/JHJF6Ks/Screenshot-from-2021-12-13-17-50-17.png "Into Page")](https://ibb.co/TkBvSbK "Into Page")
 
 [![Page - 1](https://i.ibb.co/6RzyctZ/Screenshot-from-2021-12-13-17-51-57.png "Page - 1")](https://ibb.co/pvc16KP "Page - 1")
 
