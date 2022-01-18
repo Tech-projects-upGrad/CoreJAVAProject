@@ -14,13 +14,12 @@ Banking Management Application is a project application coded in Java programmin
  
 #### Few more advanced features can be made available:
 ##### Exception Handling: 
-- Handle the exceptions using the error handling feature of JAVA. A mock server will be used to generate the availability of servers to let the developers handle the non-server availability option.
+- Handle the exceptions using the error handling feature of JAVA.
 - Handle other features when the deposit fails/ withdrawal amount is greater than the available balance.
 - Handle the Inputmismatchexception to prevent the application from crashing.[In-dev]
  
 ##### Advanced Security: 
 - If the application is blocked on a single page for more than 30 seconds, the user is logged out of the application. This feature will use the concept of multi-threading. The account holder will be shown the timed clock. 
-- A thread will record the time of total application usage in the last session and the time when the user is logged in. This record will be shown to the user in profile.
 - Concurrently three times the pin is wrongly entered, the application is blocked for the user and a message is generated for the user on next login.
  
 ###### Some user records will be auto-populated in the internal memory of the application to perform the tasks. Please make sure that the application should be kept running in case a concurrent user is doing the transactions, otherwise the transaction record will be deleted.
