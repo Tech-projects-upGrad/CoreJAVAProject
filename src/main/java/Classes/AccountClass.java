@@ -1,4 +1,7 @@
 package Classes;
+
+import java.util.HashMap;
+
 abstract class AccountClass {
 
     String name,acc_type, password;

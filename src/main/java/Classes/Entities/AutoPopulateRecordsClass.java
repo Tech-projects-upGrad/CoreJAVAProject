@@ -1,6 +1,10 @@
 package Classes.Entities;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import static Classes.Entities.DemoDataBaseClass.UserDatabase;
+import static Classes.TransactionHistoryClass.TransactionRecord;
 
 public class AutoPopulateRecordsClass {
 
@@ -16,6 +20,10 @@ public class AutoPopulateRecordsClass {
         //todo: add new data
         OldUserRecord.put("Account Card :", "323498866432");
         OldUserRecord.put("Account Pin :", "2424");
+        LinkedHashMap<String,String> transaction
+                = new LinkedHashMap<>();
+        transaction.put("Start Balance","675");
+        TransactionRecord.put(String.valueOf(1463),transaction);
 
         UserDatabase.put(1463,OldUserRecord);
 
@@ -28,6 +36,10 @@ public class AutoPopulateRecordsClass {
         //todo: add new data
         OldUserRecord.put("Account Card :", "763922194267");
         OldUserRecord.put("Account Pin :", "7657");
+       transaction
+                = new LinkedHashMap<>();
+        transaction.put("Start Balance","757868");
+        TransactionRecord.put(String.valueOf(8587),transaction);
 
         UserDatabase.put(8587,OldUserRecord);
 
@@ -40,6 +52,10 @@ public class AutoPopulateRecordsClass {
         //todo: add new data
         OldUserRecord.put("Account Card :", "839823432048");
         OldUserRecord.put("Account Pin :", "7656");
+        transaction
+                = new LinkedHashMap<>();
+        transaction.put("Start Balance","876757");
+        TransactionRecord.put(String.valueOf(7868),transaction);
 
         UserDatabase.put(7868,OldUserRecord);
 
@@ -53,6 +69,10 @@ public class AutoPopulateRecordsClass {
         //todo: add new data
         OldUserRecord.put("Account Card :", "832342224902");
         OldUserRecord.put("Account Pin :", "5463");
+        transaction
+                =  new LinkedHashMap<>();
+        transaction.put("Start Balance","234234");
+        TransactionRecord.put(String.valueOf(2334),transaction);
 
         UserDatabase.put(2334,OldUserRecord);
 
@@ -65,7 +85,10 @@ public class AutoPopulateRecordsClass {
         //todo: add new data
         OldUserRecord.put("Account Card :", "98242394937");
         OldUserRecord.put("Account Pin :", "7832");
-
+        transaction
+                =  new LinkedHashMap<>();
+        transaction.put("Start Balance","33322");
+        TransactionRecord.put(String.valueOf(7832),transaction);
         UserDatabase.put(9783,OldUserRecord);
 
     }

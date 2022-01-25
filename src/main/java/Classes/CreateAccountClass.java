@@ -3,9 +3,11 @@ package Classes;
 import Classes.Entities.DataValidator;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import static Classes.Entities.DemoDataBaseClass.AddUserRecord;
 import static Classes.Entities.DemoDataBaseClass.UserDatabase;
+import static Classes.TransactionHistoryClass.TransactionRecord;
 
 public class CreateAccountClass extends AccountClass {
 
@@ -34,6 +36,11 @@ public class CreateAccountClass extends AccountClass {
         NewUserRecord.put("Account Balance : ", String.valueOf(Acc_Balance));
         NewUserRecord.put("Account Type :", acc_type);
 
+         LinkedHashMap<String,String> transaction
+                =  new LinkedHashMap<>();
+        transaction.put("Start Balance","0");
+         TransactionRecord.put(String.valueOf(Acc_num),transaction);
+
         if(DataValidator.DataValidationDuplicate(Acc_num)==true)
         AddUserRecord(Acc_num, NewUserRecord);
         else System.out.println("Error generating new Account. Please retry");
@@ -49,6 +56,8 @@ public class CreateAccountClass extends AccountClass {
         System.out.println("Account Card :" + RetrivingOldData.get("Account Card :"));
         System.out.println("Password : " + RetrivingOldData.get("Password :"));
         System.out.println("Card Pin :" + RetrivingOldData.get("Account Pin :"));
+        System.out.println("Transactions :" + TransactionRecord.get(RetrivingOldData.get("Account Number : ")+""));
+
         System.out.println("");
 
 
@@ -65,11 +74,14 @@ public class CreateAccountClass extends AccountClass {
 
     void deposit(int acc_num, int money) throws Exception {
         //todo: Check if the user is present:
-        //todo : apply the try catch statement to check server availability
         if (UserDatabase.containsKey(acc_num)) {
             //Todo: get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData
                     = UserDatabase.get(acc_num);
+            LinkedHashMap<String, String> RetrivingOldTransaction
+                    = TransactionRecord.get(acc_num+"");//converted to string using +""
+            RetrivingOldTransaction.put(RetrivingOldTransaction.size()+" - "+"Deposit",String.valueOf(money));
+            TransactionRecord.put(String.valueOf(money), RetrivingOldTransaction);
 
             int Amount = Integer.parseInt(RetrivingOldData.get("Account Balance : "));
             Amount = Amount + money;
@@ -90,10 +102,14 @@ public class CreateAccountClass extends AccountClass {
             //Todo: get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData
                     = UserDatabase.get(Acc_num);
-
-             Amount = Integer.parseInt(RetrivingOldData.get("Account Balance : "));
+            Amount = Integer.parseInt(RetrivingOldData.get("Account Balance : "));
 
             if (Amount > WithdrawAmount) {
+                LinkedHashMap<String, String> RetrivingOldTransaction
+                        = TransactionRecord.get(Acc_num+"");//converted to string using +""
+                RetrivingOldTransaction.put(RetrivingOldTransaction.size()+" - "+"Withdraw",String.valueOf(WithdrawAmount));
+                TransactionRecord.put(String.valueOf(Acc_Balance), RetrivingOldTransaction);
+
                 Amount = Amount - WithdrawAmount;
                 RetrivingOldData.put("Account Balance : ", Amount + "");
                 UserDatabase.put(Acc_num, RetrivingOldData);
@@ -103,6 +119,17 @@ public class CreateAccountClass extends AccountClass {
         }
 
         return Amount;
+
+    }
+
+    void print_transactions(){
+
+        LinkedHashMap<String, String> TransactionData
+                = TransactionRecord.get(Acc_num+"");
+
+        for(String s: TransactionData.keySet()){
+            System.out.println(s+"  Rs."+TransactionData.get(s));
+        }
 
     }
 

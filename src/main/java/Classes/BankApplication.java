@@ -54,11 +54,13 @@ public class BankApplication {
             System.out.println("2. Open a new Account");
             System.out.println("0. to quit: \n");
 
+
             try{
                 UserChoiceLoginMenu = in.nextInt();
             }catch (InputMismatchException e){
                 System.out.println();
             }
+
 
             switch (UserChoiceLoginMenu) {
 
@@ -141,7 +143,7 @@ public class BankApplication {
                                             break;
 
                                         case 3: // check balance
-                                            user.display_balance();
+                                            System.out.println(user.display_balance());
                                             break;
 
                                         case 4:
@@ -197,6 +199,11 @@ public class BankApplication {
                                                 }
                                             } while (!editmenuquit);
                                             break;
+
+                                        case 8: //Show Transaction History
+                                            user.print_transactions();
+                                            break;
+
                                         case 0:
                                             mainmenuquit = true;
                                             break;
