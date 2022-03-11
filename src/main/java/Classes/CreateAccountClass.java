@@ -1,12 +1,12 @@
 package Classes;
 
-import Classes.Entities.DataValidator;
+import Classes.services.DataValidator;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-import static Classes.Entities.DemoDataBaseClass.AddUserRecord;
-import static Classes.Entities.DemoDataBaseClass.UserDatabase;
+import static Classes.services.DemoDataBaseClass.AddUserRecord;
+import static Classes.services.DemoDataBaseClass.UserDatabase;
 import static Classes.TransactionHistoryClass.TransactionRecord;
 
 public class CreateAccountClass extends AccountClass {

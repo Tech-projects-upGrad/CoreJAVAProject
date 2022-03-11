@@ -1,14 +1,14 @@
 package Classes;
-import Classes.Entities.DemoDataBaseClass;
-import Classes.Entities.TimeOutPage;
+import Classes.services.DemoDataBaseClass;
+import Classes.services.TimeOutPage;
 
 import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static Classes.Entities.CompanyLogoPrinterJava.LogoPrinter;
-import static Classes.Entities.DemoDataBaseClass.UserDatabase;
-import static Classes.Entities.RandomNumberGenerator.GenerateRandomNumber;
+import static Classes.services.CompanyLogoPrinterJava.LogoPrinter;
+import static Classes.services.DemoDataBaseClass.UserDatabase;
+import static Classes.services.RandomNumberGenerator.GenerateRandomNumber;
 
 public class BankApplication {
 

@@ -1,8 +1,8 @@
-package Classes.Entities;
+package Classes.services;
 
 import java.util.Timer;
 import java.util.TimerTask;
-import static Classes.Entities.CompanyLogoPrinterJava.LogoPrinter;
+import static Classes.services.CompanyLogoPrinterJava.LogoPrinter;
 
 public class TimeOutPage extends Thread {
     //Todo: This class counts down the time to allow the user on a page for 60 seconds

@@ -1,4 +1,4 @@
-package Classes.Entities;
+package Classes.services;
 
 //mocking a demo server.
 

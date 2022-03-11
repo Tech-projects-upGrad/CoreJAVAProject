@@ -1,8 +1,8 @@
-package Classes.Entities;
+package Classes.services;
 
 import java.util.HashMap;
 
-import static Classes.Entities.AutoPopulateRecordsClass.DataEntry;
+import static Classes.services.AutoPopulateRecordsClass.DataEntry;
 
 public class DemoDataBaseClass {
 

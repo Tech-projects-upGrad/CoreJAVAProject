@@ -1,11 +1,11 @@
 package Classes;
 
-import Classes.Entities.RandomNumberGenerator;
+import Classes.services.RandomNumberGenerator;
 
 import java.util.HashMap;
 
-import static Classes.Entities.DemoDataBaseClass.UserDatabase;
-import static Classes.Entities.RandomNumberGenerator.GenerateRandomNumber;
+import static Classes.services.DemoDataBaseClass.UserDatabase;
+import static Classes.services.RandomNumberGenerator.GenerateRandomNumber;
 
 public class CardClass {
     //Todo: DB is not public in real case.

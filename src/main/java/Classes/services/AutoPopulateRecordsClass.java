@@ -1,9 +1,8 @@
-package Classes.Entities;
+package Classes.services;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
-import static Classes.Entities.DemoDataBaseClass.UserDatabase;
+import static Classes.services.DemoDataBaseClass.UserDatabase;
 import static Classes.TransactionHistoryClass.TransactionRecord;
 
 public class AutoPopulateRecordsClass {
