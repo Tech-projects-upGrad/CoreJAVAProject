@@ -12,18 +12,18 @@ import static Classes.services.RandomNumberGenerator.GenerateRandomNumber;
 
 public class BankApplication {
 
-    //Todo: Handle the Input-mismatch excpetion.
+    //Todo: Handle the Input-mismatch exception as you have read in the session to make the application robust.
+
     public static void main(String[] args) {
         LogoPrinter(4, true);
-        //Todo: creating database object
+        //creating database object
         DemoDataBaseClass dataobjct = new DemoDataBaseClass();
-        //Todo: destroy the object.
 
         int wrong_entry_acc_num_cnt = 0, wrong_entry_password_cnt =0 ;
 
         TimeOutPage timeoutobject = new TimeOutPage();
-        //timeoutobject.start();
-        //Todo: To manage the timeout object efficiently
+        timeoutobject.start();
+        //To manage the timeout object efficiently
 
         String user_name = null, type;
         type = null;
@@ -65,7 +65,7 @@ public class BankApplication {
             switch (UserChoiceLoginMenu) {
 
                 case 1:
-                    //Todo: Make the user object here with the real fields after checking the user is present.
+                    //Make the user object here with the real fields after checking the user is present.
                     do {
 
                         System.out.print("Enter your account Number : ");
@@ -81,14 +81,14 @@ public class BankApplication {
 
 
                         if (DemoDataBaseClass.UserDatabase.containsKey(tmp)) {
-                            //Todo: Initializing the user object from database:
+                            //Initializing the user object from database:
                             HashMap<String, String> RetrivingOldData
                                     = UserDatabase.get(tmp);
 
                             String database_pin = RetrivingOldData.get("Password :");
                             System.out.print("Enter the 4 digit Password : ");
                             String userEnteeredpin = in.next();
-                            //Todo: Validating the user using password
+                            //Validating the user using password
                             if(wrong_entry_password_cnt>3) //check on password count
                             {
                                 System.out.println("You have entered wrong account password multiple times. Logging out"+"\n");
@@ -233,7 +233,7 @@ public class BankApplication {
                     System.out.println("Logging out of Application.");
                     break;
 
-                case 2: // Todo: Make new Account
+                case 2: //Make new Account
 
                     System.out.print("Enter your Name : ");
                     user_name = strng.nextLine();

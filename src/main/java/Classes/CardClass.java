@@ -8,7 +8,7 @@ import static Classes.services.DemoDataBaseClass.UserDatabase;
 import static Classes.services.RandomNumberGenerator.GenerateRandomNumber;
 
 public class CardClass {
-    //Todo: DB is not public in real case.
+    //DB is not public in real case.
     private String Card_Number;
     private String Card_Pin;
     private int Acc_num;
@@ -26,7 +26,7 @@ public class CardClass {
 
     public void CreateNewCard(){
         if (UserDatabase.containsKey(Acc_num)) {
-            //Todo: get the userdata from the userdatabase
+            //get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData;
             RetrivingOldData=UserDatabase.get(Acc_num);
             String NewCard = String.valueOf(GenerateRandomNumber())+
@@ -49,7 +49,7 @@ public class CardClass {
 
     public void insertCard(){
         if (UserDatabase.containsKey(Acc_num)) {
-            //Todo: get the userdata from the userdatabase
+            //get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData
                     = UserDatabase.get(Acc_num);
 
@@ -66,7 +66,7 @@ public class CardClass {
 
     public String getCard_Number() {
         if (UserDatabase.containsKey(Acc_num)) {
-            //Todo: get the userdata from the userdatabase
+            //get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData
                     = UserDatabase.get(Acc_num);
             return RetrivingOldData.get("Account Card :");
@@ -79,7 +79,7 @@ public class CardClass {
 
     public String getCard_Pin() {
         if (UserDatabase.containsKey(Acc_num)) {
-            //Todo: get the userdata from the userdatabase
+            //get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData
                     = UserDatabase.get(Acc_num);
             return RetrivingOldData.get("Account Pin :");
@@ -93,7 +93,7 @@ public class CardClass {
     public void setCard_Pin(String card_Pin) {
         if (UserDatabase.containsKey(Acc_num))
         {
-            //Todo: get the userdata from the userdatabase
+            //get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData
                     = UserDatabase.get(Acc_num);
             RetrivingOldData.put("Account Pin :", Card_Pin);

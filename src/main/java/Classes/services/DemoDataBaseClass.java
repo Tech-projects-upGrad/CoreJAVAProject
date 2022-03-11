@@ -10,13 +10,13 @@ public class DemoDataBaseClass {
     UserDatabase = new HashMap<>();
 
     public DemoDataBaseClass(){
-        //Todo: used to populate user DB
+        //used to populate user DB
         DataEntry();
     }
 
     public static void AddUserRecord(Integer AccountNumber, HashMap<String, String>
                                              ReceivedNewUserRecord){
-        //Todo: add new user to DB and check server up
+        //add new user to DB and check server up
         try{
             UserDatabase.put(AccountNumber,ReceivedNewUserRecord);
         }catch (Exception e)

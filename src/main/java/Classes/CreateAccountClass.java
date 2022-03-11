@@ -73,9 +73,9 @@ public class CreateAccountClass extends AccountClass {
     }
 
     void deposit(int acc_num, int money) throws Exception {
-        //todo: Check if the user is present:
+        //Check if the user is present:
         if (UserDatabase.containsKey(acc_num)) {
-            //Todo: get the userdata from the userdatabase
+            //get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData
                     = UserDatabase.get(acc_num);
             LinkedHashMap<String, String> RetrivingOldTransaction
@@ -96,10 +96,10 @@ public class CreateAccountClass extends AccountClass {
 
     int withdraw(int WithdrawAmount) throws Exception {
         int Amount = 0;
-        //todo: Check if the user is present:
-        //todo : apply the try catch statement to check server availability
+        //Check if the user is present:
+        //apply the try catch statement to check server availability
         if (UserDatabase.containsKey(Acc_num)) {
-            //Todo: get the userdata from the userdatabase
+            //get the userdata from the userdatabase
             HashMap<String, String> RetrivingOldData
                     = UserDatabase.get(Acc_num);
             Amount = Integer.parseInt(RetrivingOldData.get("Account Balance : "));

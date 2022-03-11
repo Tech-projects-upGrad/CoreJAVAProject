@@ -23,7 +23,7 @@ public class EditProfileClass {
         this.Acc_Num= String.valueOf(Acc_Num);
 
         if (UserDatabase.containsKey(Acc_Num)) {
-            //Todo: get the userdata from the userdatabase
+            //get the userdata from the userdatabase
 
             RetrivingOldData=UserDatabase.get(Acc_Num);
             String NewCard = String.valueOf(GenerateRandomNumber())+

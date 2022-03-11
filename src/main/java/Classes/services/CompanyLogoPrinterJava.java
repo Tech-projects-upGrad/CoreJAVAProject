@@ -3,7 +3,7 @@ package Classes.services;
 public class CompanyLogoPrinterJava {
 
     public static void LogoPrinter(int rows, Boolean IsStart){
-        //Todo: print the company logo
+        //print the company logo
         if(IsStart)
         System.out.println("Welcome to Mbank Appication");
         else
